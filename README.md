@@ -49,7 +49,7 @@ Este projeto visa analisar dados de gols e assistências de Lionel Messi ao long
 
 Os dados utilizados neste projeto foram obtidos do Kaggle. Você pode acessar o dataset original através do link abaixo:
 
-[Kaggle - Messi Dataset]([https://www.kaggle.com/dataset/xxxxxxxxxx](https://www.kaggle.com/datasets/azminetoushikwasi/-lionel-messi-all-club-goals))
+[Kaggle - Messi Dataset](https://www.kaggle.com/datasets/azminetoushikwasi/-lionel-messi-all-club-goals)
 
 ## Como Personalizar
 
