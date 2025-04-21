@@ -45,6 +45,12 @@ Este projeto visa analisar dados de gols e assistências de Lionel Messi ao long
 
     O script gerará gráficos para análise dos dados de Messi.
 
+## Fonte dos Dados
+
+Os dados utilizados neste projeto foram obtidos do Kaggle. Você pode acessar o dataset original através do link abaixo:
+
+[Kaggle - Messi Dataset]([https://www.kaggle.com/dataset/xxxxxxxxxx](https://www.kaggle.com/datasets/azminetoushikwasi/-lionel-messi-all-club-goals))
+
 ## Como Personalizar
 
 - As análises e gráficos gerados podem ser personalizados de acordo com as suas preferências, como ajustar os títulos dos gráficos, cores e outros parâmetros.
@@ -56,5 +62,3 @@ Sinta-se à vontade para fazer um fork deste repositório, contribuir com melhor
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
- 
