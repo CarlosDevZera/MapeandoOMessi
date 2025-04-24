@@ -9,6 +9,17 @@ df = pd.read_csv("D:/PyProjetos/pjt001/MapeandoOMessi/data.csv", encoding='utf-8
 df['Competition'] = df['Competition'].apply(lambda x: x.replace('�', 'é'))
 
 
+# Padronização de nomes de competições
+mapeamento_competicoes = {
+    'Champions League': 'UEFA Champions League',
+    'Champions Legue': 'UEFA Champions League',
+    'Uefa Champions League': 'UEFA Champions League',
+    'UEFA Champions Legue': 'UEFA Champions League'
+    # Adicione outras variações se houver
+}
+
+df['Competition'] = df['Competition'].replace(mapeamento_competicoes)
+
 # ===== GRÁFICO 1: Gols por Competição =====
 gols_por_competicao = df.groupby('Competition')['Result'].count().sort_values(ascending=False)
 
