@@ -1,13 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 # Leitura do arquivo CSV
 df = pd.read_csv("D:/PyProjetos/pjt001/MapeandoOMessi/data.csv", encoding='utf-8')
 
 # Corrige caracteres corrompidos
 df['Competition'] = df['Competition'].apply(lambda x: x.replace('�', 'é'))
-
 
 # Padronização de nomes de competições
 mapeamento_competicoes = {
@@ -15,7 +13,7 @@ mapeamento_competicoes = {
     'Champions Legue': 'UEFA Champions League',
     'Uefa Champions League': 'UEFA Champions League',
     'UEFA Champions Legue': 'UEFA Champions League'
-    
+
 }
 
 df['Competition'] = df['Competition'].replace(mapeamento_competicoes)
@@ -44,10 +42,6 @@ df['Season'] = df['Season'].replace({
     'Dec-13': '12/13'
 })
 
-# Agora a temporada 12/13 está com nome correto, e você pode remover a errada se quiser
-# (exemplo: se tiver alguma temporada com erro real)
-# df = df[df['Season'] != 'algum_erro']
-
 # Gols por temporada
 gols_por_temporada = df.groupby('Season')['Result'].count().sort_index()
 
@@ -66,8 +60,6 @@ plt.xticks(ticks=range(len(gols_por_temporada.index)), labels=gols_por_temporada
 plt.grid(True)
 plt.tight_layout()
 plt.show()
-
-
 
 # Contagem de assistências por jogador
 assistencias_por_jogador = df['Goal_assist'].value_counts()
@@ -89,7 +81,6 @@ plt.ylabel('Número de Assistências')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
-
 
 
 # Normaliza os tipos de finalização
