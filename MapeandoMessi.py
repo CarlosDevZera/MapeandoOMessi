@@ -15,7 +15,7 @@ mapeamento_competicoes = {
     'Champions Legue': 'UEFA Champions League',
     'Uefa Champions League': 'UEFA Champions League',
     'UEFA Champions Legue': 'UEFA Champions League'
-    # Adicione outras variações se houver
+    
 }
 
 df['Competition'] = df['Competition'].replace(mapeamento_competicoes)
